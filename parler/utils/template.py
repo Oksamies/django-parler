@@ -1,6 +1,6 @@
 from django.template import TemplateDoesNotExist
 from django.template.loader import get_template
-from django.utils import six
+import six
 
 _cached_name_lookups = {}
 

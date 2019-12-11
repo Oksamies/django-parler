@@ -3,7 +3,7 @@ import unittest
 
 from django.db import models
 from django.db.models import Manager
-from django.utils import six
+import six
 from parler.models import TranslatableModel
 from parler.models import TranslatedFields
 from .utils import AppTestCase

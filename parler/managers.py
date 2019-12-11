@@ -6,7 +6,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 from django.db.models.query import QuerySet
 from django.utils.translation import get_language
-from django.utils import six
+import six
 from parler import appsettings
 from parler.utils import get_active_language_choices
 

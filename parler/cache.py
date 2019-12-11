@@ -6,7 +6,7 @@ Since all calls to the translation table are routed through our model descriptor
 cache access and expiry is rather simple to implement.
 """
 from django.core.cache import cache
-from django.utils import six
+import six
 from parler import appsettings
 from parler.utils import get_language_settings
 

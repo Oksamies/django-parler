@@ -57,16 +57,17 @@ The translated model is compatible with django-hvad, making the transition betwe
 The manager and queryset objects of django-parler can work together with django-mptt and django-polymorphic.
 """
 from __future__ import unicode_literals
+import six
 from collections import defaultdict, OrderedDict
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured, ValidationError, FieldError, ObjectDoesNotExist
 from django.db import models, router
 from django.db.models.base import ModelBase
 from django.db.models.fields.related_descriptors import ForwardManyToOneDescriptor
-from django.utils.encoding import force_text, python_2_unicode_compatible
+from django.utils.encoding import force_text
+from six import python_2_unicode_compatible
 from django.utils.functional import lazy
 from django.utils.translation import ugettext, ugettext_lazy as _
-from django.utils import six
 from parler import signals
 from parler.cache import MISSING, _cache_translation, _cache_translation_needs_fallback, _delete_cached_translation, get_cached_translation, _delete_cached_translations, get_cached_translated_field, is_missing
 from parler.fields import TranslatedField, LanguageCodeDescriptor, TranslatedFieldDescriptor, TranslationsForeignKey, _validate_master

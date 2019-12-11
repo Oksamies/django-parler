@@ -3,7 +3,7 @@ from django.template import Node, Library, TemplateSyntaxError
 from django.urls import reverse
 from django.utils.encoding import force_text
 from django.utils.translation import get_language
-from django.utils import six
+import six
 from parler.models import TranslatableModel, TranslationDoesNotExist
 from parler.utils.context import switch_language, smart_override
 
